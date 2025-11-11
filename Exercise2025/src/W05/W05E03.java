@@ -1,19 +1,15 @@
 package W05;
 
+import java.util.Scanner;
+
 public class W05E03 {
     public static void main(String[] args) {
-    String[] sentence = {"the quick brown the fox", "jumps over the lazy dog", "the end"};
-    int count = 0;
+        Scanner input = new Scanner(System.in);
+        String choice;
+        do{
+            System.out.print("Do you want to continue? (yes/no): ");
+            choice = input.nextLine();
+        }while(!choice.equals("yes") && !choice.equals("no"));
 
-    for (String s : sentence) {
-        String[] words = s.split(" ");
-        for (String word : words) {
-        if (word.equals("the")) {
-            count++;
-        }
-        }
     }
-
-    System.out.println("The word 'the' occurs " + count + " times.");
-        }
 }
